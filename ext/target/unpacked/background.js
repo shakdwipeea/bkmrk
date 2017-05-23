@@ -1,0 +1,1 @@
+ext.background.init();

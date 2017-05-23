@@ -5,18 +5,15 @@
 
   :dependencies [[cljs-ajax "0.5.9"]
                  [compojure "1.6.0"]
-                 [conman "0.6.3"]
                  [cprop "0.1.10"]
                  [funcool/struct "1.0.0"]
                  [luminus-immutant "0.2.3"]
-                 [luminus-migrations "0.3.3"]
                  [luminus-nrepl "0.1.4"]
                  [luminus/ring-ttl-session "0.3.2"]
                  [markdown-clj "0.9.99"]
                  [metosin/muuntaja "0.2.1"]
                  [metosin/ring-http-response "0.8.2"]
                  [mount "0.1.11"]
-                 [mysql/mysql-connector-java "6.0.5"]
                  [org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.521" :scope "provided"]
                  [org.clojure/tools.cli "0.3.5"]
@@ -27,6 +24,7 @@
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
                  [re-frame "0.9.2"]
                  [reagent "0.6.1"]
+                 [com.taoensso/carmine "2.16.0"]
                  [reagent-utils "0.2.1"]
                  [ring-webjars "0.1.1"]
                  [ring/ring-core "1.6.0"]
@@ -42,10 +40,8 @@
   :resource-paths ["resources" "target/cljsbuild"]
   :target-path "target/%s/"
   :main ^:skip-aot server.core
-  :migratus {:store :database :db ~(get (System/getenv) "DATABASE_URL")}
 
   :plugins [[lein-cprop "1.0.1"]
-            [migratus-lein "0.4.7"]
             [lein-cljsbuild "1.1.5"]
             [lein-immutant "2.1.0"]
             [lein-kibit "0.1.2"]]
